@@ -10,45 +10,23 @@
     /**/
        body{
         font-family: Tahoma;
-       }
+        }
+        
+        html{
+            font-size: 20px;
+        }
+       
        @font-face {
         font-family:'Kanit' ;
         src: url(./Kanit/Kanit-Regular.ttf);
        }
-        #register{
-            /*  padding ใน
-                border กลาง
-                margin นอก
-            */
-            font-size: 24px;
-            color: blue;
-            font-weight: 800;
-            padding: 10px;
-            margin: 10px;
-            border: 1px blue solid;
-            background-color: yellow;
-        }
-        .header-form{
-            font-weight: 800;
-        }
+        
+        
         .gender{
             display: flex;
         }
-        .container{
-            display: flex;
-        }
-        .item-left{
-            background-color: red;
-            flex: 1;
-        }
-        .item-right{
-            background-color:blue;
-            flex: 2;
-        }
-        .grid-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+        
+        
         /*  display: flex; เรียงซ้ายไปขวา
             display: ;
             display: ;
@@ -65,58 +43,129 @@
         }
         }
             */
+
+        /* position 
+        static คือติดเฉยๆ
+        relative เล่นที่ตำเหน่งที่อยู่ ณ ตอนนั้น
+        absolute ย้ายไปมุมกระดาษตามกำหนด
+        fixed เมื่อเลื่อนหน้าเเล้วจะตาม
+        sticky คล้าย กับ fixed เเต่จะมีขอบเขตของตัวเอง
+         */
+         /*
+         .left{
+            float: left;
+        }
+        จัดให้อยู่ซ้าย
         
+        .right{
+            float: right;
+        }
+        จัดให้อยู่ขวา
+
+        <div style="clear: both;"></div> ทำการคั่น 
+         */
+
+         /*
+         background-image: url(https://picsum.photos/id/237/200/300);
+         background-size: cover; 
+         background-position: top right;
+        background-repeat: no-repeat;
+         */
+
+         /*
+         หน่วย 
+         px 
+         %
+         vh view height
+         em 1em = 1 เท่าของขนาดฟร้อนเดิม 2em = 2 เท่าของขนาดฟร้อนเดิม
+         ขนาดจะแปรผันตาม base
+         rem
+         */
+        
+        .container{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: azure;
+            padding: 10px;
+        }
+        .header{
+            font-size: 30px;
+            text-align: center;
+        }
+        .header-form{
+            width: 200px;
+        }
+        .flex{
+            display: flex;
+
+        }
+        .form-input{
+            margin-bottom: 10px;
+           
+        }
+        input.form,textarea{
+         border: 1px gainsboro solidcolor;
+         width : 100%
+        }
+        .button{
+            border: 0;
+            width: 100%;
+            height: 40px;
+            background-color:aquamarine;
+        }
     </style>
 </head>
+
 <body>
     <!---แสดงออกหน้าจอ-->
-    <div class="container">
-        <div class="item-left">Left</div>
-        <div class="item-right">Right</div>
+    
+<div class="container">   
+    <div class="header">
+        Register From
     </div>
-
-    <div class="grid-container">
-        <div class="grid-item">item 1</div>
-        <div class="grid-item">item 2</div>
-        <div class="grid-item">item 3</div>
-        <div class="grid-item">item 4</div>
-    </div>
-
-    <div id="register">Register From</div>
-
-    <span class="header-form">ชื่อจริง</span>
-        <input class="form "type="text">
-    <span class="header-form">นามสกุล</span>
-        <input class="form"type="text"> <br>
-    อายุ
-        <input class="form" type="number" min="0" max="100">
-    <div class="gender">
-        เพศ
-       
-        <div class ="gender">
-            <input name="gender"type="radio">ชาย
-        </div>
-        <div class ="gender">
-            <input name="gender"type="radio">หญิง
-        </div>
-        <div class ="gender">
-            <input name="gender"type="radio">ไม่ระบุ
-        </div>
-    </div>
-
+<div class="flex form-input">
+    <div class="header-form">ชื่อจริง</div>
+    <input class="form "type="text">
+</div>
+<div class="flex form-input">
+    <div class="header-form">นามสกุล</div>
+    <input class="form"type="text"> <br>
+</div>
+<div class="flex form-input">
+    <div class="header-form">อายุ</div>
+    <input class="form" type="number" min="0" max="100">
+</div>    
+    
+<div class="flex gender form-input">
+    <div class="header-form">เพศ</div> 
     <div>
+        <input name="gender" type="radio">ชาย
+        <input name="gender" type="radio">หญิง
+        <input name="gender" type="radio">ไม่ระบุ
+    </div>
+         
+    
+</div>
+
+
+    <div class="form-input">
         <h2>สิ่งที่สนใจ</h2>
         <div><input name="interest"type="checkbox">หนังสือ</div>
         <div><input name="interest"type="checkbox">หนัง</div>
         <div><input name="interest"type="checkbox">เรียน</div>
     </div>
 
-    <div>
+    <div class="form-input">
     คำอธิบายตัวตนเพิ่มเติม
         <div>
             <textarea></textarea>
         </div>
-        <button>ส่งข้อมูล</button>
+            <div class="center">
+        <button class="button">ส่งข้อมูล</button>
+        </div>
     </div>
+
+</div>    
 </body>
 </html>
