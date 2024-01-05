@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .button{
+            background-color: red;
+            color: white;
+            border:0;
+            padding: 20px;
+        }
+        .button:hover {
+            background-color: rgb(223, 11, 11);
+        }
+        .button:focus {
+            background-color: rgb(95, 82, 82);
+        }
+        input:focus{
+            background-color: fuchsia;
+        }
+        
+        .container .item:first-child {
+            background-color: red;
+            color: white;
+        }
+        .container .item:last-child {
+            background-color:blue;
+            color: white;
+        }
+        .container .item:nth-child(2){
+            background-color: yellowgreen;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!---->
+    <div class="container" >
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>s
+        <div class="item">5</div>
+    </div>
+
+    <input type="text">
+    <button class="button">click</button>
+
+
+</body>
+</html>
